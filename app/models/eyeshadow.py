@@ -21,17 +21,17 @@ class Eyeshadow(db.Model):
             "finish": self.finish,
             "form": self.form,
             "color": self.color,
-            "user_id": self.user_id
+            "customer_id": self.customer_id
         }
     
     @classmethod
     def from_dict(cls, eyeshadow_data):
         new_eyeshadow = Eyeshadow(
-        name = eyeshadow_data["name"],
-        brand = eyeshadow_data["brand"],
-        finish = eyeshadow_data["finish"],
-        form = eyeshadow_data["form"],
-        color = eyeshadow_data["color"],
-        customer_id = eyeshadow_data["customer_id"]
+            name = eyeshadow_data["name"],
+            brand = eyeshadow_data["brand"],
+            finish = eyeshadow_data["finish"],
+            form = eyeshadow_data["form"],
+            color = eyeshadow_data["color"],
+            customer_id = eyeshadow_data["customer_id"]
         )
         return new_eyeshadow

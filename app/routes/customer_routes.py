@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify, make_response, abort, session
 from werkzeug.security import check_password_hash, generate_password_hash
 from app import db
 from app.models.customer import Customer
+from app.models.eyeshadow import Eyeshadow
 from app.routes.helpers import validate_model
 
 customers_bp = Blueprint("customers_bp", __name__, url_prefix="/customers")
@@ -96,3 +97,32 @@ def delete_customer(customer_id):
     db.session.commit()
 
     return jsonify({'message': 'Customer deleted successfully.'})
+
+# POST /add an eyeshadow to collection
+@customers_bp.route("/<customer_id>/collection", methods=["POST"])
+def add_eyeshadow(customer_id):
+    customer = validate_model(Customer, customer_id)
+    eyeshadow_data = request.get_json()
+    
+    try:
+        new_eyeshadow = Eyeshadow.from_dict(eyeshadow_data)
+        db.session.add(new_eyeshadow)
+        db.session.commit() 
+    
+    except KeyError as keyerror:
+        abort(make_response(
+            {"details": f"Request body must include {keyerror.args[0]}."}, 400))
+    
+    return make_response(new_eyeshadow.to_dict(),201)
+
+
+# DELETE /delete an eyeshadow from collection
+@customers_bp.route('/<int:customer_id>/collection/<int:eyeshadow_id>', methods=['DELETE'])
+def delete_eyeshadow(eyeshadow_id, customer_id):
+    customer = validate_model(Customer, customer_id)
+    eyeshadow = validate_model(Eyeshadow, eyeshadow_id)
+
+    db.session.delete(eyeshadow)
+    db.session.commit()
+
+    return jsonify({'message': 'Eyeshadow deleted successfully.'})

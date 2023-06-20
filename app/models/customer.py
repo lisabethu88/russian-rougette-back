@@ -16,7 +16,7 @@ class Customer(db.Model):
             "name": self.name,
             "email": self.email,
             "password": self.password,
-            "eyeshadows": [list(eyeshadows.to_dict()) for eyeshadows in self.eyeshadows]
+            "eyeshadows": [eyeshadows.to_dict() for eyeshadows in self.eyeshadows]
         }
 
     @classmethod
