@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify, make_response, abort
 from app import db
 from app.models.eyeshadow_option import EyeshadowOption
 
-eyeshadow_option_bp = Blueprint("eyeshadow", __name__, url_prefix="/collection")
+eyeshadow_option_bp = Blueprint("eyeshadow_option", __name__, url_prefix="/collection")
 
 @eyeshadow_option_bp.route("", methods=["POST"])
 def create_tour():
