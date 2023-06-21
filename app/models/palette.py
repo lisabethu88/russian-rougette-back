@@ -5,4 +5,4 @@ class EyeshadowPalette(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String)
     brand = db.Column(db.String)
-    eyeshadows = db.relationship('Eyeshadow', back_populates='palette')
+    eyeshadows = db.relationship('Eyeshadow', back_populates='palettes')
