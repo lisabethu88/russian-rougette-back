@@ -5,6 +5,9 @@ from app.models.customer import Customer
 from app.models.eyeshadow import Eyeshadow
 from app.routes.helpers import validate_model
 
+# -------------------------------------
+# CUSTOMER ROUTES
+# -------------------------------------
 customers_bp = Blueprint("customers_bp", __name__, url_prefix="/customers")
 
 # POST /add a customer
@@ -98,6 +101,9 @@ def delete_customer(customer_id):
 
     return jsonify({'message': 'Customer deleted successfully.'})
 
+# -------------------------------------
+# EYESHADOW ROUTES
+# -------------------------------------
 # POST /add an eyeshadow to collection
 @customers_bp.route("/<customer_id>/collection", methods=["POST"])
 def add_eyeshadow(customer_id):

@@ -1,0 +1,102 @@
+name,brand,eyeshadows
+Modern Rennaisance,Anastasia Beverly Hills,"[
+    {
+        ""name"": ""Tempera"",
+        ""color"": ""#F2D8CD"",
+        ""brand"": ""Anastasia Beverly Hills"",
+        ""finish"": ""Matte"",
+        ""form"": ""Powder""
+    },
+    {
+        ""name"": ""Golden Ochre"",
+        ""color"": ""#D8C099"",
+        ""brand"": ""Anastasia Beverly Hills"",
+        ""finish"": ""Matte"",
+        ""form"": ""Powder""
+    },
+    {
+        ""name"": ""Vermeer"",
+        ""color"": ""#F0DEDD"",
+        ""brand"": ""Anastasia Beverly Hills"",
+        ""finish"": ""Metallic"",
+        ""form"": ""Powder""
+    },
+    {
+        ""name"": ""Buon Fresco"",
+        ""color"": ""#C6A7A6"",
+        ""brand"": ""Anastasia Beverly Hills"",
+        ""finish"": ""Matte"",
+        ""form"": ""Powder""
+    },
+    {
+        ""name"": ""Antique Bronze"",
+        ""color"": ""#5B3D35"",
+        ""brand"": ""Anastasia Beverly Hills"",
+        ""finish"": ""Metallic"",
+        ""form"": ""Powder""
+    },
+    {
+        ""name"": ""Love Letter"",
+        ""color"": ""#AB505F"",
+        ""brand"": ""Anastasia Beverly Hills"",
+        ""finish"": ""Matte"",
+        ""form"": ""Powder""
+    },
+    {
+        ""name"": ""Cyprus Umber"",
+        ""color"": ""#4A3733"",
+        ""brand"": ""Anastasia Beverly Hills"",
+        ""finish"": ""Matte"",
+        ""form"": ""Powder""
+    },
+    {
+        ""name"": ""Raw Sienna"",
+        ""color"": ""#A75E3A"",
+        ""brand"": ""Anastasia Beverly Hills"",
+        ""finish"": ""Matte"",
+        ""form"": ""Powder""
+    },
+    {
+        ""name"": ""Burnt Orange"",
+        ""color"": ""#A35325"",
+        ""brand"": ""Anastasia Beverly Hills"",
+        ""finish"": ""Matte"",
+        ""form"": ""Powder""
+    },
+    {
+        ""name"": ""Primavera"",
+        ""color"": ""#F6DFCF"",
+        ""brand"": ""Anastasia Beverly Hills"",
+        ""finish"": ""Metallic"",
+        ""form"": ""Powder""
+    },
+    {
+        ""name"": ""Red Ochre"",
+        ""color"": ""#8E3932"",
+        ""brand"": ""Anastasia Beverly Hills"",
+        ""finish"": ""Matte"",
+        ""form"": ""Powder""
+    },
+    {
+        ""name"": ""Venetian Red"",
+        ""color"": ""#8A3833"",
+        ""brand"": ""Anastasia Beverly Hills"",
+        ""finish"": ""Matte"",
+        ""form"": ""Powder""
+    },
+    {
+        ""name"": ""Warm Taupe"",
+        ""color"": ""#90796E"",
+        ""brand"": ""Anastasia Beverly Hills"",
+        ""finish"": ""Matte"",
+        ""form"": ""Powder""
+    },
+    {
+        ""name"": ""Realgar"",
+        ""color"": ""#AD392F"",
+        ""brand"": ""Anastasia Beverly Hills"",
+        ""finish"": ""Matte"",
+        ""form"": ""Powder""
+    }
+]
+"

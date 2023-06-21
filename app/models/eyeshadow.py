@@ -2,6 +2,7 @@ from app import db
 
 
 class Eyeshadow(db.Model):
+    __tablename__ = 'eyeshadows'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(100), nullable=False)
     brand = db.Column(db.String(50))
@@ -10,9 +11,9 @@ class Eyeshadow(db.Model):
     color = db.Column(db.String(6))
     customer_id = db.Column(db.Integer, db.ForeignKey('customer.id'), nullable=False)
     customers = db.relationship('Customer', back_populates='eyeshadows')
+    palette_id = db.Column(db.Integer, db.ForeignKey('palette.id'), nullable=False)
 
 
-    
     def to_dict(self):
         return {
             "id": self.id,

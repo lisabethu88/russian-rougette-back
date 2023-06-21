@@ -7,4 +7,3 @@ class EyeshadowOption(db.Model):
     finish = db.Column(db.String(50))
     form = db.Column(db.String(50))
     color = db.Column(db.String(6))
-
