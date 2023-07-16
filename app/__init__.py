@@ -30,7 +30,6 @@ def create_app(test_config=None):
 
     
     # Import models here for Alembic setup
-    from app.models.eyeshadow_option import EyeshadowOption
     from app.models.eyeshadow import Eyeshadow
     from app.models.customer import Customer
     from app.models.palette import EyeshadowPalette

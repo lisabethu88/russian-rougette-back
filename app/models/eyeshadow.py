@@ -9,9 +9,10 @@ class Eyeshadow(db.Model):
     finish = db.Column(db.String(50))
     form = db.Column(db.String(50))
     color = db.Column(db.String(7))
-    customer_id = db.Column(db.Integer, db.ForeignKey('customer.id'), nullable=False)
-    customers = db.relationship('Customer', back_populates='eyeshadows')
-    palette_id = db.Column(db.Integer, db.ForeignKey('palette.id'), nullable=False)
+    customer_id = db.Column(db.Integer, db.ForeignKey('customer.id'))
+    customers = db.relationship('Customer', back_populates='eyeshadows')    
+    palette_id = db.Column(db.Integer, db.ForeignKey('palette.id'))
+    single = db.Column(db.Boolean())
 
 
     def to_dict(self):
@@ -22,6 +23,7 @@ class Eyeshadow(db.Model):
             "finish": self.finish,
             "form": self.form,
             "color": self.color,
+            "palette_id": self.palette_id,
             "customer_id": self.customer_id
         }
     
@@ -33,6 +35,7 @@ class Eyeshadow(db.Model):
             finish = eyeshadow_data["finish"],
             form = eyeshadow_data["form"],
             color = eyeshadow_data["color"],
+            palette_id = eyeshadow_data["palette_id"],
             customer_id = eyeshadow_data["customer_id"]
         )
         return new_eyeshadow
