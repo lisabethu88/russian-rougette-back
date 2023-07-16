@@ -31,7 +31,6 @@ def create_app(test_config=None):
     
     # Import models here for Alembic setup
     from app.models.eyeshadow import Eyeshadow
-    from app.models.customer import Customer
     from app.models.palette import EyeshadowPalette
 
 
@@ -46,9 +45,6 @@ def create_app(test_config=None):
 
     from app.routes.eyeshadow_routes import eyeshadow_bp
     app.register_blueprint(eyeshadow_bp)
-
-    from app.routes.customer_routes import customers_bp
-    app.register_blueprint(customers_bp)
 
     CORS(app)
 

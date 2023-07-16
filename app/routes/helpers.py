@@ -1,7 +1,5 @@
 from flask import abort, make_response, request
-from app.models.eyeshadow_option import EyeshadowOption
 from app.models.eyeshadow import Eyeshadow
-from app.models.customer import Customer
 
 
 def get_all(records):
