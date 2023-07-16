@@ -8,9 +8,7 @@ class Eyeshadow(db.Model):
     brand = db.Column(db.String(50))
     finish = db.Column(db.String(50))
     form = db.Column(db.String(50))
-    color = db.Column(db.String(7))
-    customer_id = db.Column(db.Integer, db.ForeignKey('customer.id'))
-    customers = db.relationship('Customer', back_populates='eyeshadows')    
+    color = db.Column(db.String(7)) 
     palette_id = db.Column(db.Integer, db.ForeignKey('palette.id'))
     single = db.Column(db.Boolean())
 
@@ -23,8 +21,7 @@ class Eyeshadow(db.Model):
             "finish": self.finish,
             "form": self.form,
             "color": self.color,
-            "palette_id": self.palette_id,
-            "customer_id": self.customer_id
+            "palette_id": self.palette_id
         }
     
     @classmethod
@@ -35,7 +32,6 @@ class Eyeshadow(db.Model):
             finish = eyeshadow_data["finish"],
             form = eyeshadow_data["form"],
             color = eyeshadow_data["color"],
-            palette_id = eyeshadow_data["palette_id"],
-            customer_id = eyeshadow_data["customer_id"]
+            palette_id = eyeshadow_data["palette_id"]
         )
         return new_eyeshadow
